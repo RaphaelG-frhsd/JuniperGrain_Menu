@@ -1,8 +1,350 @@
-/* Juniper & Grain brand colors, from the client brief */
-:root {
-  --sage: #3f5a46;
-  --terracotta: #c8693f;
-  --cream: #f7f2e9;
-  --espresso: #2b211c;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+body {
+  font-family: Georgia, 'Times New Roman', serif;
+  background-color: #FAF7F0;
+  color: #354536;
+  line-height: 1.6;
+}
+
+/* HEADER */
+
+.header {
+  background-color: #354536;
+  padding: 18px 6%;
+}
+
+.header-content {
+  max-width: 1500px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  width: 160px;
+  height: auto;
+}
+
+nav {
+  display: flex;
+  gap: 35px;
+  align-items: center;
+}
+
+nav a {
+  color: #FAF7F0;
+  text-decoration: none;
+  font-size: 18px;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #D6B77A;
+}
+
+/* HERO */
+
+.hero {
+  text-align: center;
+  padding: 95px 20px;
+  background-color: #E8E6D9;
+}
+
+.eyebrow {
+  color: #8B6845;
+  font-size: 14px;
+  letter-spacing: 3px;
+  margin-bottom: 12px;
+}
+
+.hero h1 {
+  font-size: 58px;
+  margin-bottom: 12px;
+  color: #354536;
+}
+
+.hero p {
+  font-size: 19px;
+  color: #6B705C;
+}
+
+/* MENU SECTION */
+
+.menu-section {
+  width: 100%;
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 75px 45px;
+}
+
+.section-heading {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.section-heading h2 {
+  font-size: 38px;
+  margin-bottom: 8px;
+}
+
+.section-heading p {
+  color: #777;
+  font-size: 17px;
+}
+
+/* FILTERS */
+
+.filters {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 45px;
+}
+
+.filters button {
+  background-color: transparent;
+  color: #354536;
+  border: 1px solid #354536;
+  padding: 12px 26px;
+  border-radius: 25px;
+  font-family: inherit;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.filters button:hover,
+.filters button.active {
+  background-color: #354536;
+  color: white;
+}
+
+/* STATUS */
+
+.status {
+  text-align: center;
+  margin: 25px 0;
+  color: #8B6845;
+  font-size: 17px;
+}
+
+/* CATEGORY HEADINGS */
+
+.menu-container h2 {
+  font-size: 32px;
+  text-align: center;
+  margin: 45px 0 30px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid #D6B77A;
+  color: #354536;
+}
+
+/* MENU GRID */
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 35px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* FIVE ITEMS: 3 ON TOP, 2 CENTERED UNDERNEATH */
+
+.grid:has(.card:nth-child(5):last-child) {
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 35px;
+}
+
+.grid:has(.card:nth-child(5):last-child) .card {
+  grid-column: span 2;
+}
+
+.grid:has(.card:nth-child(5):last-child) .card:nth-child(4) {
+  grid-column: 2 / span 2;
+}
+
+.grid:has(.card:nth-child(5):last-child) .card:nth-child(5) {
+  grid-column: 4 / span 2;
+}
+
+/* MENU CARDS */
+
+.card {
+  background-color: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s, box-shadow 0.3s;
+  width: 100%;
+  text-align: center;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.13);
+}
+
+.card img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  display: block;
+}
+
+.card-body {
+  padding: 25px;
+}
+
+.card h3 {
+  font-size: 24px;
+  margin-bottom: 12px;
+  color: #354536;
+}
+
+.card p {
+  color: #666;
+  margin-bottom: 12px;
+  font-size: 16px;
+}
+
+/* BADGES */
+
+.badge {
+  display: inline-block;
+  background-color: #D6B77A;
+  color: #354536;
+  font-family: Arial, sans-serif;
+  font-size: 11px;
+  padding: 4px 9px;
+  border-radius: 15px;
+  vertical-align: middle;
+}
+
+/* TAGS */
+
+.tags {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  list-style: none;
+  margin: 15px 0;
+}
+
+.tags li {
+  background-color: #E8E6D9;
+  color: #52614D;
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  padding: 6px 12px;
+  border-radius: 15px;
+}
+
+/* PRICES */
+
+.card .price {
+  font-size: 22px;
+  font-weight: bold;
+  color: #8B6845;
+  margin-top: 15px;
+}
+
+/* SOLD OUT */
+
+.card.is-sold {
+  opacity: 0.65;
+}
+
+.sold {
+  color: #A33B32 !important;
+  font-weight: bold;
+}
+
+/* FOOTER */
+
+footer {
+  background-color: #354536;
+  color: #FAF7F0;
+  text-align: center;
+  padding: 35px 15px;
+  margin-top: 40px;
+}
+
+footer p {
+  margin: 5px;
+  font-size: 14px;
+}
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 1000px) {
+  .menu-section {
+    padding: 60px 30px;
+  }
+
+  .grid,
+  .grid:has(.card:nth-child(5):last-child) {
+    grid-template-columns: auto auto auto auto;
+    gap: 25px;
+  }
+
+  .grid .card,
+  .grid:has(.card:nth-child(5):last-child) .card {
+    grid-column: auto;
+  }
+
+  .card img {
+    height: 230px;
+  }
+}
+
+@media (max-width: 600px) {
+  .header-content {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  nav {
+    gap: 25px;
+  }
+
+  .hero {
+    padding: 65px 15px;
+  }
+
+  .hero h1 {
+    font-size: 42px;
+  }
+
+  .menu-section {
+    padding: 45px 18px;
+  }
+
+  .section-heading h2 {
+    font-size: 30px;
+  }
+
+  .grid,
+  .grid:has(.card:nth-child(5):last-child) {
+    grid-template-columns: 1fr;
+  }
+
+  .grid .card,
+  .grid:has(.card:nth-child(5):last-child) .card {
+    grid-column: auto;
+  }
+
+  .card img {
+    height: 240px;
+  }
+}

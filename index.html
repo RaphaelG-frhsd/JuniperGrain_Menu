@@ -1,27 +1,56 @@
+
 <!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <title>Menu | Juniper & Grain</title>
+
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
 </head>
+
 <body>
-  <header>
-    <img src="img/logo.png" alt="Juniper & Grain logo" class="logo">
-    <h1>Our Menu</h1>
+
+  <header class="header">
+    <div class="header-content">
+      <img src="img/logo.png" alt="Juniper & Grain logo" class="logo">
+
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="#menu-section">Menu</a>
+      </nav>
+    </div>
   </header>
 
   <main>
-    <!-- Your script builds one button per category in here. -->
-    <nav id="filters"></nav>
+    <section class="hero">
+      <p class="eyebrow">FRESH • LOCAL • SEASONAL</p>
+      <h1>Our Menu</h1>
+      <p>Good food, made with fresh ingredients and a little love.</p>
+    </section>
 
-    <!-- Loading and error messages go here. -->
-    <p id="status"></p>
+    <section id="menu-section" class="menu-section">
 
-    <!-- Your script builds the category headings and item cards in here. -->
-    <section id="menu"></section>
+      <div class="section-heading">
+        <h2>Explore Our Menu</h2>
+        <p>Find something delicious to enjoy.</p>
+      </div>
+
+      <div id="filters" class="filters"></div>
+
+      <p id="status" class="status">Loading the menu...</p>
+
+      <div id="menu" class="menu-container"></div>
+
+    </section>
   </main>
+
+  <footer>
+    <p>&copy; 2026 Juniper & Grain. All rights reserved.</p>
+    <p>Fresh food. Good company.</p>
+  </footer>
+
 </body>
 </html>
