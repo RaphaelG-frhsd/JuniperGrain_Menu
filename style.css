@@ -15,7 +15,7 @@ body {
 /* HEADER */
 
 .header {
-  background-color: #354536;
+  background-color: #52614D;
   padding: 18px 6%;
 }
 
@@ -34,19 +34,24 @@ body {
 
 nav {
   display: flex;
-  gap: 35px;
+  gap: 15px;
   align-items: center;
 }
 
 nav a {
   color: #FAF7F0;
+  background-color: transparent;
+  border: 1px solid #FAF7F0;
   text-decoration: none;
-  font-size: 18px;
-  transition: color 0.3s;
+  font-size: 16px;
+  padding: 10px 24px;
+  border-radius: 25px;
+  transition: 0.3s;
 }
 
 nav a:hover {
-  color: #D6B77A;
+  background-color: #FAF7F0;
+  color: #354536;
 }
 
 /* HERO */
@@ -315,7 +320,7 @@ footer p {
   }
 
   nav {
-    gap: 25px;
+    gap: 15px;
   }
 
   .hero {
@@ -348,3 +353,4 @@ footer p {
     height: 240px;
   }
 }
+  
